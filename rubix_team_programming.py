@@ -1,4 +1,3 @@
-
 # Decorators Programming to illustrate the functions that can be treated as objects
 
 def rubix_data(tuchel):
@@ -17,6 +16,19 @@ def goal_calculator(x):
         return x-y
     print("Goal deficit is",end= ' ')
     return goal_deficit
+
+def hello_arsenal(wenger):
+    def kronke():
+        print("This is the before job of Arsenal")
+        wenger()
+        print("This is after job of Arsenal")
+    return kronke
+
+def arterta_replacing_wenger():
+    print("Head coach")
+
+arterta_replacing_wenger = hello_arsenal(arterta_replacing_wenger)
+arterta_replacing_wenger()
 
 chelsea_scoreline = goal_calculator(2)
 print(chelsea_scoreline(0))
